@@ -1,7 +1,15 @@
 body {
-    margin: 0;
+    outline: 1px solid red;
+    max-width: 600px;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
     color: #FFFFFF;
     background: #1F2937;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
 }
