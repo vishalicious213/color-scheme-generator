@@ -16,6 +16,11 @@ form {
     box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.15);
 }
 
+#color {
+    height: 2.25rem;
+    
+}
+
 button {
     font-family: 'Inter', sans-serif;
     font-size: .75rem;
