@@ -6,12 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Scheme Generator</title>
     <link rel="stylesheet" href="index.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">    
 </head>
 <body>
     <div id="interface">
         <form id="form">
             <input type="color" name="color" id="color">
-            <select name="scheme" id="scheme"></select>
+            <select name="scheme" id="scheme">
+                <option value="">Analogic</option>
+                <option value="">Analogic-complement</option>
+                <option value="">Complement</option>
+                <option value="">Monochrome</option>
+                <option value="">Monochrome-dark</option>
+                <option value="">Monochrome-light</option>
+                <option value="">Quad</option>
+                <option value="">Triad</option>
+            </select>
             <button>Get color scheme</button>
         </form>
     </div>
