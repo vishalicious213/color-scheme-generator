@@ -14,6 +14,12 @@ form.addEventListener("submit", function(e) {
     sendColorInfo()
 })
 
+palette.addEventListener("click", function(e) {
+    // const hexes = document.querySelectorAll(".color-hex")
+    console.log(e.target)
+
+})
+
 // ⬇️ EVENT HANDLERS ⬇️
 
 function sendColorInfo() {
@@ -42,9 +48,9 @@ function showPalette(data) {
 
     colorsArray.forEach(function(color) {
         palette.innerHTML += `
-            <div class="color pick" style="background-color: ${color.hex.value};">
+            <div class="color pick" data-hex="${color.hex.value} style="background-color: ${color.hex.value};">
                 <div class="color-name">${color.name.value}</div>
-                <div class="color-hex">${color.hex.value}</div>
+                <div class="color-hex"">${color.hex.value}</div>
             </div>
         `
     })
