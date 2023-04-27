@@ -2,6 +2,7 @@ const form = document.getElementById("form")
 const color = document.getElementById("color")
 const scheme = document.getElementById("scheme")
 const submitBtn = document.getElementById("submit")
+const palette = document.getElementById("palette")
 
 // ⬇️ EVENT LISTENERS ⬇️
 
@@ -20,5 +21,17 @@ function sendColorInfo() {
 
     fetch(`https://www.thecolorapi.com/scheme?hex=${hex}&mode=${scheme.value}&format=json`)
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => showPalette(data))
+}
+
+// ⬇️ RENDER THE APP ⬇️
+
+function showPalette(colors) {
+    console.log(colors)
+
+    palette.innerHTML = ""
+
+    palette.innerHTML = `
+        <div>TEST</div>
+    `
 }
