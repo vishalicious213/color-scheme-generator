@@ -57,7 +57,7 @@ button:hover {
 .color {
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: .5rem 1rem;
     font-size: .75rem;
     border-left: 1px solid #3D4B60;
     border-right: 1px solid #3D4B60;
