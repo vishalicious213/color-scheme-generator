@@ -37,7 +37,7 @@ function sendColorInfo() {
 
 // copy selected color's hex code to clipboard
 function copyColor(hexCode) {
-    console.log(hexCode)
+    navigator.clipboard.writeText(hexCode)
 }
 
 // ⬇️ RENDER THE APP ⬇️
