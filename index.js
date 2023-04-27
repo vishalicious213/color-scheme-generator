@@ -1,6 +1,7 @@
 const form = document.getElementById("form")
 const selectedColor = document.getElementById("color")
 const scheme = document.getElementById("scheme")
+const selectedCount = document.getElementById("count")
 const submitBtn = document.getElementById("submit")
 const palette = document.getElementById("palette")
 
@@ -17,9 +18,11 @@ form.addEventListener("submit", function(e) {
 
 function sendColorInfo() {
     let hex = selectedColor.value.slice(-6)
+    let count = selectedCount.value
     console.log("hex", hex)
+    console.log("count", count)
 
-    fetch(`https://www.thecolorapi.com/scheme?hex=${hex}&mode=${scheme.value}&format=json`)
+    fetch(`https://www.thecolorapi.com/scheme?hex=${hex}&mode=${scheme.value}&count=${count}&format=json`)
         .then(res => res.json())
         .then(data => showPalette(data))
 }

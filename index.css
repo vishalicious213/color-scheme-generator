@@ -26,10 +26,14 @@ form {
     padding: 0;
 }
 
-#scheme {
+#scheme, #count {
     background: #1F2937;
     border-radius: .25rem;
     color: #D5D4D8;
+}
+
+#count {
+    width: 2.5rem;
 }
 
 button {
