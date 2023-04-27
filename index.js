@@ -37,7 +37,12 @@ function sendColorInfo() {
 
 // copy selected color's hex code to clipboard
 function copyColor(hexCode) {
+    const bottom = document.getElementById("bottom")
+    bottom.innerText = ""
+
     navigator.clipboard.writeText(hexCode)
+    bottom.innerText = `Copied ${hexCode} to clipboard`
+    setTimeout(function() {bottom.innerText = ""}, 3000)
 }
 
 // ⬇️ RENDER THE APP ⬇️
