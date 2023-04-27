@@ -116,4 +116,7 @@ button:hover {
     border-top: none;
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem;
+    text-align: center;
+    font-size: .75rem;
+    line-height: 1.5rem;
 }

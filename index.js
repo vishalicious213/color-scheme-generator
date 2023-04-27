@@ -42,7 +42,7 @@ function copyColor(hexCode) {
 
     navigator.clipboard.writeText(hexCode)
     bottom.innerText = `Copied ${hexCode} to clipboard`
-    setTimeout(function() {bottom.innerText = ""}, 3000)
+    setTimeout(function() {bottom.innerText = ""}, 2000)
 }
 
 // ⬇️ RENDER THE APP ⬇️
