@@ -10,7 +10,6 @@ const palette = document.getElementById("palette")
 // listen for form submissions
 form.addEventListener("submit", function(e) {
     e.preventDefault()
-    console.log(selectedColor.value, scheme.value)
     sendColorInfo()
 })
 
@@ -27,8 +26,6 @@ palette.addEventListener("click", function(e) {
 function sendColorInfo() {
     let hex = selectedColor.value.slice(-6)
     let count = selectedCount.value
-    console.log("hex", hex)
-    console.log("count", count)
 
     fetch(`https://www.thecolorapi.com/scheme?hex=${hex}&mode=${scheme.value}&count=${count}&format=json`)
         .then(res => res.json())
@@ -49,7 +46,6 @@ function copyColor(hexCode) {
 
 function showPalette(data) {
     const colorsArray = data.colors
-    console.log(colorsArray)
 
     palette.innerHTML = `
         <div class="color color-header background">
