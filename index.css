@@ -62,11 +62,21 @@ button:hover {
     border-right: 1px solid #3D4B60;
 }
 
-.color-header {
+.pick:hover {
+    scale: 1.1;
+    border: 1px solid #D5D4D8;
+    border-radius: 1rem;
+    transition-delay: 1s ease;
+}
+
+.background {
     background: #141E30;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border: 1px solid #3D4B60;
+}
+
+.color-header {
     border-bottom: none;
     text-transform: uppercase;
     border-top-left-radius: .5rem;
@@ -74,11 +84,7 @@ button:hover {
 }
 
 #bottom {
-    background: #141E30;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 1.5rem;
-    border: 1px solid #3D4B60;
     border-top: none;
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem;
