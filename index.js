@@ -8,5 +8,17 @@ const submitBtn = document.getElementById("submit")
 // listen for form submissions
 form.addEventListener("submit", function(e) {
     e.preventDefault()
-    console.log("submitted")
+    console.log(color.value, scheme.value)
+    sendColorInfo()
 })
+
+// ⬇️ EVENT HANDLERS ⬇️
+
+function sendColorInfo() {
+    let hex = color.value.slice(-6)
+    console.log("hex", hex)
+
+    fetch(`https://www.thecolorapi.com/scheme?hex=${hex}&mode=${scheme.value}&format=json`)
+        .then(res => res.json())
+        .then(data => console.log(data))
+}
