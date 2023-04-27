@@ -10,3 +10,5 @@ I built out the application, but made some design changes and added functionalit
     - The API's default is 5 colors, this application allows from 3-9 colors to be chosen
 - Color strips can be clicked to copy a color's hex code to the viewer's clipboard
 - Instructional prompts were added below some of the fields to explain their purpose in a brief manner
+
+Deployed at: https://vish213-colors.netlify.app/
