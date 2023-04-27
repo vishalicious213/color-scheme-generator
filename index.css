@@ -12,8 +12,9 @@ body {
 form {
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1rem 0 0;
     box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.15);
+    margin-bottom: 0;
 }
 
 #color {
@@ -81,6 +82,18 @@ button:hover {
     text-transform: uppercase;
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
+}
+
+#labels {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin-left: .9rem;
+    margin-top: 0;
+    padding: .25rem 0 1rem;
+    font-size: .75rem;
+    color: #778190;
+    font-style: italic;
 }
 
 #bottom {
