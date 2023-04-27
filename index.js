@@ -38,8 +38,12 @@ function copyColor(hexCode) {
     bottom.innerText = ""
 
     navigator.clipboard.writeText(hexCode)
+    bottom.style.color = "#FFFFFF"
     bottom.innerText = `Copied ${hexCode} to clipboard`
-    setTimeout(function() {bottom.innerText = ""}, 2000)
+    setTimeout(function() {
+        bottom.style.color = "#778190"
+        bottom.innerText = "Click a color strip to copy to clipboard"
+    }, 2000)
 }
 
 // ⬇️ RENDER THE APP ⬇️
