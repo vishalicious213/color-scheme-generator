@@ -9,6 +9,8 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+/* INTERFACE */
+
 form {
     display: flex;
     justify-content: space-between;
@@ -54,6 +56,8 @@ button:hover {
     scale: 1.25;
 }
 
+/* PALETTE */
+
 .color {
     display: flex;
     justify-content: space-between;
@@ -67,6 +71,11 @@ button:hover {
     border-radius: .5rem;
     padding: .25rem .75rem;
     background: rgba(0, 0, 0, 0.25);
+}
+
+.color-hex {
+    width: 3.5rem;
+    text-align: center;
 }
 
 .pick:hover {
