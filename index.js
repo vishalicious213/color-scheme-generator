@@ -14,14 +14,16 @@ form.addEventListener("submit", function(e) {
     sendColorInfo()
 })
 
+// listen for clicks on color strip
 palette.addEventListener("click", function(e) {
-    // const hexes = document.querySelectorAll(".color-hex")
-    console.log(e.target)
-
+    if (e.target.dataset.hex) {
+        copyColor(e.target.dataset.hex)
+    }
 })
 
 // ⬇️ EVENT HANDLERS ⬇️
 
+// send hex code to API
 function sendColorInfo() {
     let hex = selectedColor.value.slice(-6)
     let count = selectedCount.value
@@ -31,6 +33,11 @@ function sendColorInfo() {
     fetch(`https://www.thecolorapi.com/scheme?hex=${hex}&mode=${scheme.value}&count=${count}&format=json`)
         .then(res => res.json())
         .then(data => showPalette(data))
+}
+
+// copy selected color's hex code to clipboard
+function copyColor(hexCode) {
+    console.log(hexCode)
 }
 
 // ⬇️ RENDER THE APP ⬇️
@@ -48,9 +55,9 @@ function showPalette(data) {
 
     colorsArray.forEach(function(color) {
         palette.innerHTML += `
-            <div class="color pick" data-hex="${color.hex.value} style="background-color: ${color.hex.value};">
-                <div class="color-name">${color.name.value}</div>
-                <div class="color-hex"">${color.hex.value}</div>
+            <div class="color pick" data-hex="${color.hex.value}" style="background-color: ${color.hex.value};">
+                <div class="color-name" data-hex="${color.hex.value}">${color.name.value}</div>
+                <div class="color-hex" data-hex="${color.hex.value}">${color.hex.value}</div>
             </div>
         `
     })
