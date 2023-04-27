@@ -26,8 +26,9 @@ function sendColorInfo() {
 
 // ⬇️ RENDER THE APP ⬇️
 
-function showPalette(colors) {
-    console.log(colors)
+function showPalette(data) {
+    const colorsArray = data.colors
+    console.log(colorsArray)
 
     palette.innerHTML = ""
 
