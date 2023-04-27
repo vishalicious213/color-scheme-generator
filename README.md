@@ -12,3 +12,11 @@ I built out the application, but made some design changes and added functionalit
 - Instructional prompts were added below some of the fields to explain their purpose in a brief manner
 
 Deployed at: https://vish213-colors.netlify.app/
+
+Original design from Scrimba: 
+
+![](/img/scrimba-design.jpg)
+
+My implementation:
+
+![](/img/my-design.jpg)
