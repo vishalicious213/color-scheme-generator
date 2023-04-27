@@ -34,7 +34,7 @@ function showPalette(data) {
 
     colorsArray.forEach(function(color) {
         palette.innerHTML += `
-            <div class="color">
+            <div class="color" style="background-color: ${color.hex.value};">
                 <div class="color-name">${color.name.value}</div>
                 <div class="color-hex">${color.hex.value}</div>
             </div>
