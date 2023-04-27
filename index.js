@@ -33,7 +33,12 @@ function showPalette(data) {
     const colorsArray = data.colors
     console.log(colorsArray)
 
-    palette.innerHTML = ""
+    palette.innerHTML = `
+        <div class="color color-header">
+            <div>Closest name</div>
+            <div>Hex code</div>
+        </div>
+    `
 
     colorsArray.forEach(function(color) {
         palette.innerHTML += `
