@@ -1,5 +1,5 @@
 const form = document.getElementById("form")
-const color = document.getElementById("color")
+const selectedColor = document.getElementById("color")
 const scheme = document.getElementById("scheme")
 const submitBtn = document.getElementById("submit")
 const palette = document.getElementById("palette")
@@ -9,14 +9,14 @@ const palette = document.getElementById("palette")
 // listen for form submissions
 form.addEventListener("submit", function(e) {
     e.preventDefault()
-    console.log(color.value, scheme.value)
+    console.log(selectedColor.value, scheme.value)
     sendColorInfo()
 })
 
 // ⬇️ EVENT HANDLERS ⬇️
 
 function sendColorInfo() {
-    let hex = color.value.slice(-6)
+    let hex = selectedColor.value.slice(-6)
     console.log("hex", hex)
 
     fetch(`https://www.thecolorapi.com/scheme?hex=${hex}&mode=${scheme.value}&format=json`)
@@ -32,7 +32,12 @@ function showPalette(data) {
 
     palette.innerHTML = ""
 
-    palette.innerHTML = `
-        <div>TEST</div>
-    `
+    colorsArray.forEach(function(color) {
+        palette.innerHTML += `
+            <div class="color">
+                <div class="color-name">${color.name.value}</div>
+                <div class="color-hex">${color.hex.value}</div>
+            </div>
+        `
+    })
 }
