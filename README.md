@@ -20,3 +20,35 @@ Original design from Scrimba:
 My implementation:
 
 ![](/img/my-design.jpg)
+
+## JavaScript concepts
+
+- variables
+- arrays
+    - forEach()
+- document
+    - .getElementById()
+- functions
+    - event listeners
+    - event handlers
+- element
+    - .addEventListener()
+    - .value()
+    - .innerText
+    - .style
+        - .color
+- events
+    - .preventDefault()
+    - .target
+    - .dataset
+- if statements
+- strings
+    - .slice()
+- fetch
+    - .then()
+    - .json()
+- navigator
+    - .clipboard
+    - .writeText()
+- setTimeout()
+- string template literals
